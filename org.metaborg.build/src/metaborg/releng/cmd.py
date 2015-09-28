@@ -12,7 +12,7 @@ from metaborg.util.path import CommonPrefix
 
 class MetaborgReleng(cli.Application):
   PROGNAME = 'releng'
-  VERSION = '1.4.0'
+  VERSION = '1.4.1'
 
   repoDirectory = '.'
   repo = None
