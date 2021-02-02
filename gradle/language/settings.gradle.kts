@@ -33,6 +33,7 @@ fun String.includeProject(id: String, dir: String = id, path: String = "$devenvR
 if(repositoryConfigurations.isUpdated("sdf")) {
   "sdf".run {
     includeProject("org.metaborg.meta.lang.template")
+    includeProject("sdf3.ext.statix")
   }
 }
 
