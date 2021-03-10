@@ -93,6 +93,7 @@ if(repositoryConfigurations.isUpdated("spoofax2")) {
     includeProject("org.metaborg.spoofax.core")
     includeProject("org.metaborg.meta.core")
     includeProject("org.metaborg.spoofax.meta.core")
+    includeProject("org.metaborg.spoofax.nativebundle")
   }
 }
 
