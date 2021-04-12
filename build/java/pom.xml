@@ -53,6 +53,8 @@
     <module>${repo.root}/jsglr/org.spoofax.interpreter.library.jsglr</module>
 
     <!-- NaBL & Statix -->
+    <module>${repo.root}/nabl/scopegraph</module>
+    <module>${repo.root}/nabl/p_raffrayi</module>
     <module>${repo.root}/nabl/nabl2.terms</module>
     <module>${repo.root}/nabl/nabl2.solver</module>
     <module>${repo.root}/nabl/renaming.java</module>
