@@ -13,6 +13,7 @@ class MetaborgEclipseGenerator(object):
     'de.jcup.yamleditor.feature.group',
   ]
   eclipsePhotonRepo = 'https://artifacts.metaborg.org/content/groups/eclipse-2020-06/'
+  yamlEditorRepo = 'https://de-jcup.github.io/update-site-eclipse-yaml-editor/update-site/'
 
   def __init__(self, workingDir, destination, spoofax=True, spoofaxRepo=None, spoofaxRepoLocal=False,
       langDev=True, lwbDev=True, moreRepos=None, moreIUs=None):
@@ -39,6 +40,7 @@ class MetaborgEclipseGenerator(object):
     ius.update(MetaborgEclipseGenerator.spoofaxIUs)
     if langDev or lwbDev:
       ius.update(MetaborgEclipseGenerator.spoofaxLangDevIUs)
+      repos.add(yamlEditorRepo)
 
     repos.update(moreRepos)
     ius.update(moreIUs)
