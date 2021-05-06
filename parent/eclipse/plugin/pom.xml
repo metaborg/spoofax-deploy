@@ -281,9 +281,9 @@
 
   <repositories>
     <repository>
-      <id>eclipse-photon</id>
+      <id>eclipse-2020-06</id>
       <layout>p2</layout>
-      <url>https://artifacts.metaborg.org/content/groups/eclipse-photon/</url>
+      <url>https://artifacts.metaborg.org/content/groups/eclipse-2020-06/</url>
     </repository>
   </repositories>
 
