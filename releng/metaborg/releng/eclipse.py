@@ -40,7 +40,7 @@ class MetaborgEclipseGenerator(object):
     ius.update(MetaborgEclipseGenerator.spoofaxIUs)
     if langDev or lwbDev:
       ius.update(MetaborgEclipseGenerator.spoofaxLangDevIUs)
-      repos.add(yamlEditorRepo)
+      repos.add(MetaborgEclipseGenerator.yamlEditorRepo)
 
     repos.update(moreRepos)
     ius.update(moreIUs)
