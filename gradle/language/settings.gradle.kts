@@ -40,6 +40,7 @@ if(repositoryConfigurations.isUpdated("sdf")) {
 if(repositoryConfigurations.isUpdated("stratego")) {
   "stratego".run {
     includeProject("org.metaborg.meta.lang.stratego")
+    includeProject("stratego.lang")
   }
 }
 

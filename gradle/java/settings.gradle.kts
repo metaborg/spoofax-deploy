@@ -78,11 +78,16 @@ if(repositoryConfigurations.isUpdated("strategoxt")) {
 
 if(repositoryConfigurations.isUpdated("nabl")) {
   "nabl".run {
+    includeProject("scopegraph")
+    includeProject("p_raffrayi")
+
     includeProject("nabl2.terms")
     includeProject("nabl2.solver")
 
     includeProject("statix.solver")
     includeProject("statix.generator")
+
+    includeProject("renaming.java")
   }
 }
 
