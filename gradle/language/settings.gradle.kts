@@ -41,6 +41,7 @@ if(repositoryConfigurations.isUpdated("stratego")) {
   "stratego".run {
     includeProject("org.metaborg.meta.lang.stratego")
     includeProject("stratego.lang")
+    //includeProject("stratego.build.spoofax2.integrationtest") // Disabled because tests take a long time.
   }
 }
 
