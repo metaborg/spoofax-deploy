@@ -67,3 +67,9 @@ if(repositoryConfigurations.isUpdated("spoofax2")) {
     includeProject("meta.lib.spoofax")
   }
 }
+
+if(repositoryConfigurations.isUpdated("spt")) {
+  "spt".run {
+    includeProject("org.metaborg.meta.lang.spt")
+  }
+}
