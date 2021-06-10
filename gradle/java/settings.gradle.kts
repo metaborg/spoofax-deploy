@@ -107,3 +107,10 @@ if(repositoryConfigurations.isUpdated("spoofax.gradle")) {
     includeProject("spoofax.gradle", "plugin")
   }
 }
+
+if(repositoryConfigurations.isUpdated("spt")) {
+  "spt".run {
+    includeProject("org.metaborg.mbt.core")
+    includeProject("org.metaborg.spt.core")
+  }
+}
