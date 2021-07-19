@@ -34,6 +34,7 @@
     <module>../../../../spt/org.metaborg.meta.lang.spt.eclipse</module>
     <module>../../../../spt/org.metaborg.meta.lang.spt.interactive.eclipse</module>
     <module>../../../../stratego/stratego.lang.eclipse</module>
+    <module>../../../../stratego/strategolib.eclipse</module>
     <module>../../../../stratego/org.metaborg.meta.lang.stratego.eclipse</module>
     <module>../../../../ts/org.metaborg.meta.lang.ts.eclipse</module>
     <module>../../../../metaborg-coq/org.metaborg.lang.coq.eclipse</module>
