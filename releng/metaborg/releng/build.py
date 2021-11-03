@@ -109,6 +109,8 @@ class RelengBuilder(object):
     maven = Maven()
     maven.errors = True
     maven.batch = True
+    maven.daemon = False
+    maven.threads = None
     # Disable annoying warnings when using Cygwin on Windows.
     maven.env['CYGWIN'] = 'nodosfilewarning'
     if self.clean:
@@ -237,6 +239,7 @@ class RelengBuilder(object):
   @staticmethod
   def __build_strategoxt(basedir, bootstrapStratego, testStratego, skipTests, eclipseQualifier, maven, mavenDeployer, **_):
     target = 'deploy' if mavenDeployer else 'install'
+    maven.threads = '1'
 
     # Build StrategoXT
     strategoXtDir = os.path.join(basedir, 'strategoxt', 'strategoxt')
@@ -319,12 +322,14 @@ class RelengBuilder(object):
   @staticmethod
   def __build_languages(basedir, maven, mavenDeployer, **_):
     target = 'deploy' if mavenDeployer else 'install'
+    maven.threads = '1'
     cwd = os.path.join(basedir, 'releng', 'build', 'language')
     maven.run_in_dir(cwd, target)
 
   @staticmethod
   def __build_dynsem(basedir, eclipseQualifier, maven, mavenDeployer, **_):
     target = 'deploy' if mavenDeployer else 'install'
+    maven.threads = '1'
     cwd = os.path.join(basedir, 'releng', 'build', 'language', 'dynsem')
     # Don't skip expensive steps, always clean, because of incompatibilities/bugs with annotation processor.
     if 'clean' not in maven.targets:
@@ -334,6 +339,7 @@ class RelengBuilder(object):
   @staticmethod
   def __build_spt(basedir, eclipseQualifier, maven, mavenDeployer, **_):
     target = 'deploy' if mavenDeployer else 'install'
+    maven.threads = '1'
     cwd = os.path.join(basedir, 'releng', 'build', 'language', 'spt')
     maven.run_in_dir(cwd, target, forceContextQualifier=eclipseQualifier)
     return StepResult([
@@ -349,6 +355,7 @@ class RelengBuilder(object):
       print('Skipping integration tests because skipTests is set to true')
       return
     target = 'verify'
+    maven.threads = '1'
     cwd = os.path.join(basedir, 'releng', 'build', 'integrationtest')
     maven.run_in_dir(cwd, target)
 
