@@ -327,7 +327,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>31.0.1-jre</version>
+        <version>26.0-jre</version>
         <!-- Must be compatible to 23.6-jre for IntelliJ IDEA -->
         <exclusions>
           <exclusion>
@@ -336,11 +336,14 @@
           </exclusion>
         </exclusions>
       </dependency>
+      <!-- Required for Guava >= 27.0: -->
+      <!--
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>failureaccess</artifactId>
         <version>1.0.1</version>
       </dependency>
+      -->
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
