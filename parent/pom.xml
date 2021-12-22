@@ -26,7 +26,7 @@
 
     <truffle-version>1.0.0-rc2</truffle-version>
     <immutables-version>2.8.8</immutables-version>
-    <pie-version>0.19.2</pie-version>
+    <pie-version>0.19.7</pie-version>
   </properties>
 
   <repositories>
@@ -298,17 +298,17 @@
       <dependency>
         <groupId>org.metaborg</groupId>
         <artifactId>resource</artifactId>
-        <version>0.13.0</version>
+        <version>0.13.2</version>
       </dependency>
       <dependency>
         <groupId>org.metaborg</groupId>
         <artifactId>common</artifactId>
-        <version>0.9.8</version>
+        <version>0.10.1</version>
       </dependency>
       <dependency>
         <groupId>org.metaborg</groupId>
         <artifactId>log.api</artifactId>
-        <version>0.5.2</version>
+        <version>0.5.5</version>
       </dependency>
 
       <!-- Command-line parsing and running -->
