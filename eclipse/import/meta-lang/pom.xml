@@ -35,6 +35,7 @@
     <module>../../../../spt/org.metaborg.meta.lang.spt.interactive</module>
     <module>../../../../stratego/stratego.lang</module>
     <module>../../../../stratego/strategolib</module>
+    <module>../../../../stratego/gpp</module>
     <module>../../../../stratego/org.metaborg.meta.lang.stratego</module>
     <module>../../../../ts/org.metaborg.meta.lang.ts</module>
     <module>../../../../metaborg-coq/org.metaborg.lang.coq</module>

@@ -110,7 +110,7 @@ class RelengBuilder(object):
     maven.errors = True
     maven.batch = True
     maven.daemon = False
-    maven.threads = None
+    maven.threads = '1'
     # Disable annoying warnings when using Cygwin on Windows.
     maven.env['CYGWIN'] = 'nodosfilewarning'
     if self.clean:

@@ -39,6 +39,7 @@
     <module>${repo.root}/sdf/sdf3.ext.statix</module>
     <module>${repo.root}/stratego/stratego.lang</module>
     <module>${repo.root}/stratego/strategolib</module>
+    <module>${repo.root}/stratego/gpp</module>
     <module>${repo.root}/stratego/org.metaborg.meta.lang.stratego</module>
     <module>${repo.root}/ts/org.metaborg.meta.lang.ts</module>
     <module>${repo.root}/metaborg-coq/org.metaborg.lang.coq</module>
