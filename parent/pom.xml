@@ -127,17 +127,17 @@
       <dependency>
         <groupId>com.google.inject</groupId>
         <artifactId>guice</artifactId>
-        <version>4.2.0</version>
+        <version>4.2.3</version>
       </dependency>
       <dependency>
         <groupId>com.google.inject.extensions</groupId>
         <artifactId>guice-multibindings</artifactId>
-        <version>4.2.0</version>
+        <version>4.2.3</version>
       </dependency>
       <dependency>
         <groupId>com.google.inject.extensions</groupId>
         <artifactId>guice-assistedinject</artifactId>
-        <version>4.2.0</version>
+        <version>4.2.3</version>
       </dependency>
       <dependency>
         <groupId>aopalliance</groupId>
@@ -336,14 +336,11 @@
           </exclusion>
         </exclusions>
       </dependency>
-      <!-- Required for Guava >= 27.0: -->
-      <!--
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>failureaccess</artifactId>
         <version>1.0.1</version>
       </dependency>
-      -->
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
