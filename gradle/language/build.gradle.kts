@@ -4,13 +4,13 @@ buildscript {
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.4.6")
+    classpath("org.metaborg:gradle.config:0.4.7")
   }
 }
 apply(plugin = "org.metaborg.gradle.config.root-project")
 
 plugins {
-  id("org.metaborg.gitonium") version "0.1.4"
+  id("org.metaborg.gitonium") version "0.1.5"
 
   // Set versions for plugins to use, only applying them in subprojects (apply false here).
   id("org.metaborg.devenv.spoofax.gradle.langspec") apply false // No version: use plugin built by composite build.

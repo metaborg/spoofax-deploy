@@ -59,3 +59,10 @@ After publishing a new release, update the version in the following places:
 If you've bumped `systemProp.spoofax2Version` and/or `systemProp.spoofax2BaselineVersion`, also update:
 - https://github.com/metaborg/spoofax-pie/blob/develop/gradle.properties#L3
 - https://github.com/metaborg/devenv/blob/develop/gradle.properties#L2-L3
+
+## Copyright and License
+
+Copyright © 2018-2022 Delft University of Technology
+
+The files in this repository are licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+You may use the files in this repository in compliance with the license.
