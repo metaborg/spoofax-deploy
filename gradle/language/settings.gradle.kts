@@ -16,7 +16,7 @@ buildscript {
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.4.4")
+    classpath("org.metaborg:gradle.config:0.4.6")
   }
 }
 
@@ -65,5 +65,11 @@ if(repositoryConfigurations.isUpdated("nabl")) {
 if(repositoryConfigurations.isUpdated("spoofax2")) {
   "spoofax2".run {
     includeProject("meta.lib.spoofax")
+  }
+}
+
+if(repositoryConfigurations.isUpdated("spt")) {
+  "spt".run {
+    includeProject("org.metaborg.meta.lang.spt")
   }
 }

@@ -16,7 +16,7 @@ buildscript {
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.4.4")
+    classpath("org.metaborg:gradle.config:0.4.6")
   }
 }
 
@@ -105,5 +105,12 @@ if(repositoryConfigurations.isUpdated("spoofax2")) {
 if(repositoryConfigurations.isUpdated("spoofax.gradle")) {
   "spoofax.gradle".run {
     includeProject("spoofax.gradle", "plugin")
+  }
+}
+
+if(repositoryConfigurations.isUpdated("spt")) {
+  "spt".run {
+    includeProject("org.metaborg.mbt.core")
+    includeProject("org.metaborg.spt.core")
   }
 }

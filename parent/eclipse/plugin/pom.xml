@@ -13,7 +13,7 @@
   <parent>
     <groupId>org.metaborg</groupId>
     <artifactId>parent</artifactId>
-    <version>2.5.16</version>
+    <version>2.6.0-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
 
@@ -283,7 +283,7 @@
     <repository>
       <id>eclipse-photon</id>
       <layout>p2</layout>
-      <url>https://artifacts.metaborg.org/content/groups/eclipse-photon/</url>
+      <url>https://download.eclipse.org/releases/photon/</url>
     </repository>
   </repositories>
 
