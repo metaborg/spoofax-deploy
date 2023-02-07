@@ -333,7 +333,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>26.0-jre</version>
+        <version>31.1-jre</version>
         <!-- Must be compatible to 23.6-jre for IntelliJ IDEA -->
         <exclusions>
           <exclusion>
