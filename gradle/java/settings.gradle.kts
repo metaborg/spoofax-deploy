@@ -66,7 +66,6 @@ if(repositoryConfigurations.isUpdated("stratego")) {
   "stratego".run {
     includeProject("stratego.build")
     includeProject("stratego.build.spoofax2")
-    includeProject("stratego.compiler.pack")
   }
 }
 
