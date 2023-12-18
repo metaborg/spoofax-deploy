@@ -3,6 +3,12 @@ plugins {
   id("org.metaborg.gitonium") version "0.1.5"
 }
 
+buildscript {
+  repositories {
+    maven("https://artifacts.metaborg.org/content/groups/public/")
+  }
+}
+
 gitonium {
   tagPattern = java.util.regex.Pattern.compile("""devenv-release/(.+)""")
 }

@@ -1,7 +1,9 @@
 // Apply plugin the old way for compatibility with both Gradle 5.6.4 and 6+.
 buildscript {
   repositories {
+    mavenLocal()
     maven("https://artifacts.metaborg.org/content/groups/public/")
+    mavenCentral()
   }
   dependencies {
     classpath("org.metaborg:gradle.config:0.4.7")

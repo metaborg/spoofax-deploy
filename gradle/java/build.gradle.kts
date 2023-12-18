@@ -1,6 +1,7 @@
 // Apply plugin the old way for compatibility with both Gradle 5.6.4 and 6+.
 buildscript {
   repositories {
+    mavenLocal()
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
@@ -18,6 +19,11 @@ gitonium {
 }
 
 subprojects {
+  repositories {
+    mavenLocal()
+    maven("https://artifacts.metaborg.org/content/groups/public/")
+  }
+
   configure<mb.gradle.config.MetaborgExtension> {
     configureSubProject()
   }
