@@ -48,6 +48,7 @@ if(repositoryConfigurations.isUpdated("mb-exec")) {
 
 if(repositoryConfigurations.isUpdated("jsglr")) {
   "jsglr".run {
+    includeProject("jsglr.shared")
     includeProject("org.spoofax.jsglr")
     includeProject("org.spoofax.jsglr2")
     includeProject("org.spoofax.interpreter.library.jsglr")
