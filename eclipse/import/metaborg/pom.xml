@@ -26,6 +26,7 @@
     <module>../../../../jsglr/org.spoofax.interpreter.library.jsglr</module>
     <module>../../../../jsglr/org.spoofax.jsglr</module>
     <module>../../../../jsglr/org.spoofax.jsglr2</module>
+    <module>../../../../jsglr/jsglr.shared</module>
     <module>../../../../sdf/org.metaborg.sdf2table</module>
     <module>../../../../sdf/org.metaborg.parsetable</module>
     <module>../../../../nabl/scopegraph</module>

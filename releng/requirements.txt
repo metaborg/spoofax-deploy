@@ -13,3 +13,4 @@ eclipsegen~=0.5.0
 bintraypy~=0.1
 nexuspy~=0.1
 packaging~=19.0
+setuptools; python_version >= "3.12"
