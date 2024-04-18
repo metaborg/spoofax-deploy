@@ -6,9 +6,6 @@ pluginManagement {
   }
 }
 
-if(org.gradle.util.VersionNumber.parse(gradle.gradleVersion).major < 6) {
-  enableFeaturePreview("GRADLE_METADATA")
-}
 
 
 buildscript {
@@ -16,7 +13,7 @@ buildscript {
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.4.6")
+    classpath("org.metaborg:gradle.config:0.5.6")
   }
 }
 
@@ -41,6 +38,8 @@ if(repositoryConfigurations.isUpdated("stratego")) {
   "stratego".run {
     includeProject("org.metaborg.meta.lang.stratego")
     includeProject("stratego.lang")
+    includeProject("strategolib")
+    includeProject("gpp")
     //includeProject("stratego.build.spoofax2.integrationtest") // Disabled because tests take a long time.
   }
 }

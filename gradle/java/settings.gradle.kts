@@ -6,17 +6,13 @@ pluginManagement {
   }
 }
 
-if(org.gradle.util.VersionNumber.parse(gradle.gradleVersion).major < 6) {
-  enableFeaturePreview("GRADLE_METADATA")
-}
-
 
 buildscript {
   repositories {
     maven("https://artifacts.metaborg.org/content/groups/public/")
   }
   dependencies {
-    classpath("org.metaborg:gradle.config:0.4.6")
+    classpath("org.metaborg:gradle.config:0.5.6")
   }
 }
 
