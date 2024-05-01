@@ -14,7 +14,7 @@ plugins {
 }
 
 gitonium {
-  tagPattern = java.util.regex.Pattern.compile("""devenv-release/(.+)""")
+  tagPrefix = "devenv-release/"
 }
 
 subprojects {
