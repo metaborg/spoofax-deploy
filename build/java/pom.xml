@@ -30,6 +30,7 @@
     
     <!-- Execution -->
     <module>${repo.root}/mb-exec/org.metaborg.util</module>
+    <module>${repo.root}/mb-exec/util-vfs2</module>
     <module>${repo.root}/mb-exec/org.spoofax.interpreter.core</module>
     <module>${repo.root}/mb-exec/org.spoofax.interpreter.library.java</module>
     <module>${repo.root}/mb-exec/org.spoofax.interpreter.library.xml</module>
