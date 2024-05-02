@@ -36,6 +36,7 @@ if(repositoryConfigurations.isUpdated("mb-rep")) {
 if(repositoryConfigurations.isUpdated("mb-exec")) {
   "mb.exec".run {
     includeProject("org.metaborg.util")
+    includeProject("util-vfs2")
     includeProject("org.spoofax.interpreter.core")
     includeProject("org.spoofax.interpreter.library.java")
     includeProject("org.spoofax.interpreter.library.xml")

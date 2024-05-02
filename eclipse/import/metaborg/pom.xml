@@ -19,6 +19,7 @@
     <module>../../../../mb-rep/org.spoofax.terms</module>
     <module>../../../../mb-rep/org.spoofax.interpreter.library.index</module>
     <module>../../../../mb-exec/org.metaborg.util</module>
+    <module>../../../../mb-exec/util-vfs2</module>
     <module>../../../../mb-exec/org.spoofax.interpreter.core</module>
     <module>../../../../mb-exec/org.spoofax.interpreter.library.java</module>
     <module>../../../../mb-exec/org.spoofax.interpreter.library.xml</module>
