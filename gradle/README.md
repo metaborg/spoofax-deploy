@@ -29,7 +29,6 @@ The JDK that is downloaded and packaged into Eclipse is managed entirely within 
 Note that all JDK and Eclipse downloads are downloaded via our [artifact server](https://artifacts.metaborg.org) in the [releases repository](https://artifacts.metaborg.org/content/repositories/releases/). For both we use our artifact server as a mirror, where we manually upload the JDK and Eclipse for the supported architectures. In addition, the Eclipse version requires a _group_ of p2 proxies. Follow [a link to an existing group](https://artifacts.metaborg.org/#view-repositories;eclipse-2022-06~configuration) to find the three required proxies of packages, releases, and updates.
 
 ### Publishing
-
 This repository is published via Gradle and Git with the [Gitonium](https://github.com/metaborg/gitonium) and [Gradle Config](https://github.com/metaborg/gradle.config) plugins.
 It is published to our [artifact server](https://artifacts.metaborg.org) in the [releases repository](https://artifacts.metaborg.org/content/repositories/releases/).
 
@@ -40,12 +39,17 @@ All dependencies are managed in the `gradle.properties` file:
 - `systemProp.spoofax2Version` sets the version of Spoofax 2 that this build uses.
 - `systemProp.spoofax2BaselineVersion` sets the version of Spoofax 2 that this build uses as a baseline for bootstrapping.
 
-To make a new release, create a tag in the form of `devenv-release/*` where `*` is the version of the release you'd like to make.
-The tag must be the only tag for the commit.
-If there are no new commits in this repository, you can create an empty commit for a version bump with `git commit --allow-empty -m "Empty commit for version bump"`.
-Then build the project with `./gradlew buildAll` to check if building succeeds.
+To make a new release, create a tag in the `spoofax-deploy` repository in the form of `devenv-release/*.*.*` where `*.*.*` is the version of the release you'd like to make. The tag must be the only tag for the commit. Then build the `devenv` root using `./gradlew buildAll` to check if building succeeds.
 
-This project must be published locally.
+> [!NOTE]
+> If there are no new commits in this repository, you can create an empty commit for a version bump:
+>
+> ```shell
+> git commit --allow-empty -m "Empty commit for version bump"`.
+> ```
+>
+
+This project must be published from your local system.
 You will need an account with write access to our artifact server, and tell Gradle about this account.
 Create the `~/.gradle/gradle.properties` file if it does not exist.
 Add the following lines to it, replacing `<username>` and `<password>` with those of your artifact server account:
@@ -54,10 +58,10 @@ publish.repository.metaborg.artifacts.username=<username>
 publish.repository.metaborg.artifacts.password=<password>
 ```
 Then run `./gradlew publishAll` to publish all built artifacts.
-You should also push the release tag you made such that this release is reproducible by others.
+You should also push the release tag you made to the remote such that this release is reproducible by others.
+
 
 #### Using the published version
-
 After publishing a new release, update the version in the following places:
 - https://github.com/metaborg/spoofax-pie/blob/develop/gradle.properties#L4
 - https://github.com/metaborg/devenv/blob/develop/gradle.properties#L4
@@ -66,9 +70,3 @@ If you've bumped `systemProp.spoofax2Version` and/or `systemProp.spoofax2Baselin
 - https://github.com/metaborg/spoofax-pie/blob/develop/gradle.properties#L3
 - https://github.com/metaborg/devenv/blob/develop/gradle.properties#L2-L3
 
-## Copyright and License
-
-Copyright © 2018-2022 Delft University of Technology
-
-The files in this repository are licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-You may use the files in this repository in compliance with the license.
