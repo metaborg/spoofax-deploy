@@ -10,7 +10,7 @@ buildscript {
 apply(plugin = "org.metaborg.gradle.config.root-project")
 
 plugins {
-  id("org.metaborg.gitonium") version "1.1.0"
+  id("org.metaborg.gitonium") version "1.2.0"
 }
 
 gitonium {
