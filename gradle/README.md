@@ -5,8 +5,7 @@ A Gradle build of Spoofax 2, built under the `org.metaborg.devenv` group ID to p
 ## Development
 
 ### Git conventions
-
-The `spoofax3` branch of this repository is both buildable in isolation, and built via the [devenv repository](https://github.com/metaborg/devenv).
+The `master` branch of this repository is both buildable in isolation, and built via the [devenv repository](https://github.com/metaborg/devenv).
 
 ### Building
 
@@ -34,8 +33,7 @@ Note that all JDK and Eclipse downloads are downloaded via our [artifact server]
 This repository is published via Gradle and Git with the [Gitonium](https://github.com/metaborg/gitonium) and [Gradle Config](https://github.com/metaborg/gradle.config) plugins.
 It is published to our [artifact server](https://artifacts.metaborg.org) in the [releases repository](https://artifacts.metaborg.org/content/repositories/releases/).
 
-First ensure that the other Spoofax 2 repositories are up-to-date by merging their `master` branches into `spoofax3` branches.
-Also ensure that this repository is up-to-date.
+Ensure that the `master` branches in this repository and the other Spoofax 2 repositories are up-to-date.
 
 Then ensure that you depend on only released versions of Spoofax 2. That is, no `SNAPSHOT` or other development versions.
 All dependencies are managed in the `gradle.properties` file:
