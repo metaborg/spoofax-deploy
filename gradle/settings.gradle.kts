@@ -7,13 +7,8 @@ pluginManagement {
 }
 
 
-
-// Only include composite builds when this is the root project (it has no parent). Otherwise, the parent project
-// (devenv) will include these composite builds, as IntelliJ does not support nested composite builds.
-if(gradle.parent == null) {
-  includeBuildWithName("java", "spoofax2.releng.java.root")
-  includeBuildWithName("language", "spoofax2.releng.language.root")
-}
+includeBuildWithName("java", "spoofax2.releng.java.root")
+includeBuildWithName("language", "spoofax2.releng.language.root")
 
 fun includeBuildWithName(dir: String, name: String) {
   includeBuild(dir) {
