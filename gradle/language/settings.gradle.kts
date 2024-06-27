@@ -6,7 +6,17 @@ pluginManagement {
     }
 }
 
-
+// This is only here because this build imports the projects of the subbuilds, instead of the subbuilds themselves.
+dependencyResolutionManagement {
+    repositories {
+        maven("https://artifacts.metaborg.org/content/groups/public/")
+    }
+    versionCatalogs {
+        create("libs") {
+            from("org.metaborg.spoofax3:catalog:0.1.0")
+        }
+    }
+}
 
 buildscript {
     repositories {
