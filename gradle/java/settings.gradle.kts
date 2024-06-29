@@ -6,6 +6,7 @@ pluginManagement {
     }
 }
 
+// This allows us to use the catalog in dependencies
 // This is only here because this build imports the projects of the subbuilds, instead of the subbuilds themselves.
 dependencyResolutionManagement {
     repositories {
@@ -13,7 +14,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            from("org.metaborg.spoofax3:catalog:0.2.0")
+            from("org.metaborg.spoofax3:catalog:0.2.2")
         }
     }
 }
