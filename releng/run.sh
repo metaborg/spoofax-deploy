@@ -19,32 +19,30 @@ VENV="$DIR/.venv"
 # Create virtual environment, if it does not exist yet
 if [ ! -f "$VENV/bin/activate" ]
 then
-    # On Ubuntu/Debian, Python3 does not automatically come with ensurepip installed
-    # https://bugs.launchpad.net/ubuntu/+source/python3.4/+bug/1290847/+index?comments=all
-    # Note that the issue is marked as "fixed", but it's still broken.
-    if ! $PYTHON_CMD -c 'help("modules")' 2> /dev/null | grep ensurepip > /dev/null
+    if ! command -v virtualenv &> /dev/null
     then
-        echo "Could not find the 'ensurepip' module, which is required for creating a"
+        echo "Could not find the Python 'virtualenv' command, which is required for creating a"
         echo "Python virtual environment. There are a few options to fix this, for example:"
-        echo "- Install python3-venv using your system's package manager, e.g.:"
-        # This fix comes from comments #63-64 on the Ubuntu bug report
-        echo "    sudo apt install python3-venv"
+        echo "- Install virtualenv using Pip, e.g.:"
+        echo "    $PYTHON_CMD -m pip install virtualenv"
         echo "- Create the virtual environment manually without Pip and install Pip inside it:"
         # This fix comes from comment #58 on the Ubuntu bug report
-        echo "    $PYTHON_CMD -m venv --without-pip \"$VENV\""
-        echo "    curl -s https://bootstrap.pypa.io/get-pip.py | \"$VENV/bin/python\""
+        echo "    $PYTHON_CMD -m venv \"$VENV\""
         echo "After executing one of these options, you can re-run this command."
         exit 1
     fi
 
-    # This command is silent by itself, but errors (if any) are printed to stdout
-    $PYTHON_CMD -m venv "$VENV"
+    # This command may print to stdout
+    virtualenv "$VENV"
 fi
 
 # Activate virtual environment
-# (Since venv is made by idiots, temporarily disable unbound variable checks when activating virtual environment)
+# (Temporarily disable unbound variable checks when activating virtual environment (was necessary for venv, still necessary for virtualenv?))
 set +o nounset
 source "$VENV/bin/activate"
+
+# Upgrade pip
+$PYTHON_CMD -m pip install --upgrade pip --quiet
 
 # Install requirements
 $PYTHON_CMD -m pip install --quiet --requirement "$DIR/requirements.txt"
