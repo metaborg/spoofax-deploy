@@ -32,8 +32,8 @@ then
         exit 1
     fi
 
-    # This command may print to stdout
-    virtualenv "$VENV"
+    # This command should not print to stdout
+    virtualenv "$VENV" --quiet
 fi
 
 # Activate virtual environment
