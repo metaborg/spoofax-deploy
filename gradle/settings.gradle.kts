@@ -7,6 +7,12 @@ pluginManagement {
 }
 
 
+// This downloads an appropriate JVM if not already available
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+}
+
+
 includeBuildWithName("java", "spoofax2.releng.java.root")
 includeBuildWithName("language", "spoofax2.releng.language.root")
 

@@ -1,12 +1,13 @@
 rootProject.name = "spoofax2.releng.language.root"
 
+// This allows us to use plugins from Metaborg Artifacts
 pluginManagement {
     repositories {
         maven("https://artifacts.metaborg.org/content/groups/public/")
     }
 }
 
-// This is only here because this build imports the projects of the subbuilds, instead of the subbuilds themselves.
+// This allows us to use the catalog in dependencies
 dependencyResolutionManagement {
     repositories {
         maven("https://artifacts.metaborg.org/content/groups/public/")
@@ -16,6 +17,11 @@ dependencyResolutionManagement {
             from("org.metaborg.spoofax3:catalog:0.3.3")
         }
     }
+}
+
+// This downloads an appropriate JVM if not already available
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
 buildscript {
