@@ -10,14 +10,17 @@ buildscript {
 apply(plugin = "org.metaborg.gradle.config.root-project")
 
 plugins {
-    id("org.metaborg.gitonium") version "1.2.0"
+    id("org.metaborg.gitonium") version "1.7.0"
 }
 
 gitonium {
-    tagPrefix = "devenv-release/"
+    tagPrefix.set("devenv-release/")
 }
 
+version = gitonium.version
+
 subprojects {
+    version = gitonium.version
     configure<mb.gradle.config.MetaborgExtension> {
         configureSubProject()
     }
