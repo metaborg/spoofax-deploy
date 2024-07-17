@@ -1,28 +1,27 @@
-// Apply plugin the old way for compatibility with both Gradle 5.6.4 and 6+.
-buildscript {
-    repositories {
-        maven("https://artifacts.metaborg.org/content/groups/public/")
-    }
-    dependencies {
-        classpath("org.metaborg:gradle.config:0.7.1")
-    }
-}
-apply(plugin = "org.metaborg.gradle.config.root-project")
+import org.metaborg.convention.MavenPublishConventionExtension
 
+// Workaround for issue: https://youtrack.jetbrains.com/issue/KTIJ-19369
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("org.metaborg.gitonium") version "1.7.0"
+    id("org.metaborg.convention.root-project")
+    alias(libs.plugins.gitonium)
 }
 
 gitonium {
     tagPrefix.set("devenv-release/")
 }
 
-version = gitonium.version
+allprojects {
+    apply(plugin = "org.metaborg.gitonium")
 
-subprojects {
     version = gitonium.version
-    configure<mb.gradle.config.MetaborgExtension> {
-        configureSubProject()
+    group = "org.metaborg.devenv"
+
+    pluginManager.withPlugin("org.metaborg.convention.maven-publish") {
+        extensions.configure(MavenPublishConventionExtension::class.java) {
+            repoOwner.set("metaborg")
+            repoName.set("spoofax-deploy")
+        }
     }
 }
 
