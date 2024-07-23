@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.metaborg</groupId>
   <artifactId>parent</artifactId>
-  <version>2.5.20</version>
+  <version>2.6.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Maven parent POM for all projects</description>
@@ -16,8 +16,8 @@
   <properties>
     <forceContextQualifier>qualifier</forceContextQualifier>
 
-    <metaborg-version>2.5.20</metaborg-version>
-    <metaborg-baseline-version>2.5.17</metaborg-baseline-version>
+    <metaborg-version>2.6.0-SNAPSHOT</metaborg-version>
+    <metaborg-baseline-version>2.5.20</metaborg-baseline-version>
     <metaborg-meta-lang-scope>provided</metaborg-meta-lang-scope>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,10 +25,11 @@
     <java-version>1.8</java-version>
 
     <truffle-version>1.0.0-rc2</truffle-version>
-    <immutables-version>2.8.8</immutables-version>
+    <immutables-version>2.10.1</immutables-version>
     <pie-version>0.20.0</pie-version>
     <logback-version>1.2.9</logback-version>
-    <guice-version>5.1.0</guice-version>
+    <guice-version>7.0.0</guice-version>
+    <jackson-version>2.17.1</jackson-version>
   </properties>
 
   <repositories>
@@ -190,27 +191,27 @@
       <dependency>
         <groupId>com.virtlink.commons</groupId>
         <artifactId>commons-configuration2-jackson</artifactId>
-        <version>1.3.1</version>
+        <version>1.3.5</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.14.0</version>
+        <version>${jackson-version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>2.14.0</version>
+        <version>${jackson-version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
-        <version>2.14.0</version>
+        <version>${jackson-version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-yaml</artifactId>
-        <version>2.14.0</version>
+        <version>${jackson-version}</version>
       </dependency>
       <dependency>
         <groupId>org.yaml</groupId>
@@ -568,7 +569,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -746,7 +747,7 @@
                   <pluginExecutionFilter>
                     <groupId>org.metaborg</groupId>
                     <artifactId>spoofax-maven-plugin</artifactId>
-                    <versionRange>[2.5.20,)</versionRange>
+                    <versionRange>[2.6.0-SNAPSHOT,)</versionRange>
                     <goals>
                       <!-- Language specification -->
                       <goal>clean</goal>

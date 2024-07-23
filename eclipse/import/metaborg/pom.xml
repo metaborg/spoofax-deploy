@@ -11,7 +11,7 @@
   <parent>
     <groupId>org.metaborg</groupId>
     <artifactId>parent</artifactId>
-    <version>2.5.20</version>
+    <version>2.6.0-SNAPSHOT</version>
     <relativePath>../../parent</relativePath>
   </parent>
 
@@ -19,6 +19,7 @@
     <module>../../../../mb-rep/org.spoofax.terms</module>
     <module>../../../../mb-rep/org.spoofax.interpreter.library.index</module>
     <module>../../../../mb-exec/org.metaborg.util</module>
+    <module>../../../../mb-exec/util-vfs2</module>
     <module>../../../../mb-exec/org.spoofax.interpreter.core</module>
     <module>../../../../mb-exec/org.spoofax.interpreter.library.java</module>
     <module>../../../../mb-exec/org.spoofax.interpreter.library.xml</module>

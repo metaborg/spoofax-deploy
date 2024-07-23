@@ -1,8 +1,8 @@
 plugins {
-  id("org.metaborg.gradle.config.root-project") version "0.4.6"
-  id("org.metaborg.gitonium") version "0.1.4"
+    id("org.metaborg.gradle.config.root-project") version "0.7.3"
+    id("org.metaborg.gitonium") version "1.2.0"
 }
 
 gitonium {
-  tagPattern = java.util.regex.Pattern.compile("""devenv-release/(.+)""")
+    tagPrefix = "devenv-release/"
 }

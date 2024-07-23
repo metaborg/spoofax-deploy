@@ -79,8 +79,8 @@ class RelengBuilder(object):
     eclipsePrereqs = add_main_target('eclipse-prereqs', allLangAndIntegrationTestDeps + [], RelengBuilder.__build_eclipse_prereqs)
     eclipse = add_main_target('eclipse', allLangAndIntegrationTestDeps + [eclipsePrereqs], RelengBuilder.__build_eclipse)
 
-    intellij = add_main_target('intellij', allLangAndIntegrationTestDeps, RelengBuilder.__build_intellij)
-    spt_intellij = add_main_target('spt-intellij', [spt], RelengBuilder.__build_spt_intellij)
+#     intellij = add_main_target('intellij', allLangAndIntegrationTestDeps, RelengBuilder.__build_intellij)
+#     spt_intellij = add_main_target('spt-intellij', [spt], RelengBuilder.__build_spt_intellij)
 
     builder.add_target('all', mainTargets)
 
