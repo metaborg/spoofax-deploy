@@ -10,11 +10,7 @@ buildscript {
 apply(plugin = "org.metaborg.gradle.config.root-project")
 
 plugins {
-    id("org.metaborg.gitonium") version "1.2.0"
-}
-
-gitonium {
-    tagPrefix = "devenv-release/"
+    id("org.metaborg.gitonium") version "1.7.4"
 }
 
 subprojects {
@@ -27,9 +23,17 @@ val spoofax2Version: String = System.getProperty("spoofax2Version")
 val spoofax2BaselineVersion: String = System.getProperty("spoofax2BaselineVersion")
 val spoofax2DevenvVersion: String = System.getProperty("spoofax2DevenvVersion")
 allprojects {
+    apply(plugin = "org.metaborg.gitonium")
+
+    gitonium {
+        tagPrefix.set("devenv-release/")
+        firstParentOnly.set(false)
+    }
+
+    version = gitonium.version
     group = "org.metaborg.devenv"
+
     ext["spoofax2Version"] = spoofax2Version
     ext["spoofax2BaselineVersion"] = spoofax2BaselineVersion
     ext["spoofax2DevenvVersion"] = spoofax2DevenvVersion
 }
-
