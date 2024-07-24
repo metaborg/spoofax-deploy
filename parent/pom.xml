@@ -17,7 +17,7 @@
     <forceContextQualifier>qualifier</forceContextQualifier>
 
     <metaborg-version>2.6.0-SNAPSHOT</metaborg-version>
-    <metaborg-baseline-version>2.5.20</metaborg-baseline-version>
+    <metaborg-baseline-version>2.5.21</metaborg-baseline-version>
     <metaborg-meta-lang-scope>provided</metaborg-meta-lang-scope>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
