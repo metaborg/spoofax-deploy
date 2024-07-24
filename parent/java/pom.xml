@@ -55,7 +55,6 @@
               !org.junit.jupiter,
               !org.junit.vintage,
               !org.xml.*,
-              javax.inject;provider=metaborg;mandatory:=provider;version=0,
               !javax.*,
               org.spoofax.*,
               org.metaborg.*,
