@@ -7,7 +7,7 @@ plugins {
     id("org.metaborg.convention.root-project")
     alias(libs.plugins.gitonium)
     // Set versions for plugins to use, only applying them in subprojects (apply false here).
-    id("org.metaborg.devenv.spoofax.gradle.langspec") apply false // No version: use plugin built by composite build.
+    id("org.metaborg.devenv.spoofax.gradle.langspec") version "0.1.41" apply false
 }
 
 allprojects {
