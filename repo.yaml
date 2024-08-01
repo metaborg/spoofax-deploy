@@ -1,0 +1,43 @@
+---
+repoOwner: "metaborg"
+repoName: "spoofax-deploy"
+mainBranch: "master"
+mavenGroup: "org.metaborg.devenv"
+releaseTagPrefix: "devenv-release/"
+
+title: "Spoofax Deploy"
+inceptionYear: "2008"
+
+contributors:
+  - id: "Gohla"
+    name: "Gabriel Konat"
+  - id: "lennartcl"
+    name: "Lennart Kats"
+  - id: "hendrikvanantwerpen"
+    name: "Hendrik van Antwerpen"
+  - id: "Virtlink"
+    name: "Daniel A. A. Pelsmaeker"
+  - id: "Apanatshka"
+    name: "Jeff Smits"
+  - id: "oskar-van-rest"
+    name: "Oskar van Rest"
+  - id: "vvergu"
+    name: "Vlad Vergu"
+  - id: "udesou"
+    name: "Eduardo Souza"
+
+developers:
+  - id: "Apanatshka"
+    name: "Jeff Smits"
+
+files:
+  githubWorkflows:
+    publishRelease: true
+    publishSnapshot: true
+  gradleRootProject:
+    generate: true
+    rootProjectName: "deploy-project"
+    includedBuilds:
+      - path: "gradle/java/"
+      - path: "gradle/language/"
+
